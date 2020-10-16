@@ -1,0 +1,31 @@
+Interpreting Sequential
+Topology:
+Layer name: fc1_input, layer type: InputLayer
+Layer name: fc1, layer type: Dense
+  -> Activation (linear), layer name: fc1
+Layer name: relu1, layer type: Activation
+Layer name: fc2, layer type: Dense
+  -> Activation (linear), layer name: fc2
+Layer name: relu2, layer type: Activation
+Layer name: fc3, layer type: Dense
+  -> Activation (linear), layer name: fc3
+Layer name: relu3, layer type: Activation
+Layer name: output, layer type: Dense
+  -> Activation (linear), layer name: output
+Layer name: softmax, layer type: Activation
+{'Model': {'Precision': 'ap_fixed<16,6>', 'ReuseFactor': 1, 'Strategy': 'Latency'}}
+Interpreting Sequential
+Input shape: [16]
+Topology:
+Layer name: fc1_input, layer type: InputLayer, current shape: [[None, 16]]
+Layer name: fc1, layer type: Dense, current shape: [[None, 16]]
+Layer name: relu1, layer type: Activation, current shape: [[None, 64]]
+Layer name: fc2, layer type: Dense, current shape: [[None, 64]]
+Layer name: relu2, layer type: Activation, current shape: [[None, 32]]
+Layer name: fc3, layer type: Dense, current shape: [[None, 32]]
+Layer name: relu3, layer type: Activation, current shape: [[None, 32]]
+Layer name: output, layer type: Dense, current shape: [[None, 32]]
+Layer name: softmax, layer type: Softmax, current shape: [[None, 5]]
+Creating HLS model
+Writing HLS project
+Done
